@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sidebar</title>
+
+  <!-- Sidebar -->
+  <link href="css/sidebar.min.css" rel="stylesheet" type="text/css">
+</head>
+<body class="panel-body">
+  <!-- Side header start -->
+  <header class="side-header">
+    <!-- Collapse icon start -->
+    <div id="header_collapse_icon">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <!-- Collapse icon end -->
+
+    <!-- Sidebar start -->
+    <div class="sidebar">
+      <nav class="side-navbar">
+        <!-- Top section start -->
+        <div class="nav-user">
+          <a href="#">
+            <img src="path/to/photo.png" alt="Profile photo.">
+          </a>
+          <div class="nav-user-info">
+            <p>Username</p>
+          </div>
+        </div>
+        <!-- Top section end -->
+
+        <!-- Middle section start -->
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fa-solid fa-home"></i>
+              Link 1
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fa-solid fa-list"></i>
+              Link 2
+            </a>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown">
+              <a class="nav-link" href="#">
+                <i class="fa-solid fa-file-circle-plus"></i>
+                Link 3 with dropdown
+              </a>
+              <div class="sub-items-collapse-icon">
+                <i class="fa-solid fa-arrow-down"></i>
+                <!-- OR SIMPLE -->
+                <div>&darr;</div>
+              </div>
+            </div>
+            <ul id="id_sl_sub_list_1" class="sub-nav-list">
+              <li class="sub-item">
+                <i class="fa-solid fa-leaf"></i>
+                <a class="sub-link" href="#">
+                  Sub link 1
+                </a>
+              </li>
+              <li class="sub-item">
+                <i class="fa-solid fa-leaf"></i>
+                <a class="sub-link" href="#">
+                  Sub link 2
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <div class="dropdown">
+              <a class="nav-link" href="#">
+                <i class="fa-solid fa-file-circle-plus"></i>
+                Link 4 with dropdown
+              </a>
+              <div class="sub-items-collapse-icon">
+                <i class="fa-solid fa-arrow-down"></i>
+                <!-- OR SIMPLE -->
+                <div>&darr;</div>
+              </div>
+            </div>
+            <ul id="id_sl_sub_list_2" class="sub-nav-list">
+              <li class="sub-item">
+                <a class="sub-link" href="#">
+                  Sub link 1
+                </a>
+              </li>
+              <li class="sub-item">
+                <a class="sub-link" href="#">
+                  Sub link 2
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <!-- Middle section end -->
+
+        <!-- Bottom section start -->
+        <div class="logout-btn">
+          <form action="/logout" method="POST">
+            <input type="submit" value="Logout">
+          </form>
+        </div>
+        <!-- Bottom section end -->
+      </nav>
+    </div>
+    <!-- Sidebar end -->
+  </header>
+  <!-- Side header end -->
+
+
+  <!-- Sidebar links activators start -->
+  <div id="active_nav_link_number" class="d-none"></div>
+  <div id="active_sub_nav_link_selector" class="d-none">id_sl_sub_list_1,1</div>
+  <!-- Sidebar links activators end -->
+
+  <div class="panel-container">
+    <div class="panel-content-wrap">
+      ...
+    </div>
+    <footer class="panel-footer">
+      ...
+    </footer>
+  </div>
+
+  <!-- Sidebar -->
+  <script src="js/sidebar.js"></script>
+  <script src="js/subNavList.js"></script>
+</body>
+</html>
