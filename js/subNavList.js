@@ -1,11 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const navItemsCollapseIcon = document.querySelector('.sub-items-collapse-icon');
+    const navItemsCollapseIcons = document.querySelectorAll('.sub-items-collapse-icon');
 
-    if(navItemsCollapseIcon) {
+    if(navItemsCollapseIcons.length) {
         setSubNavListsHeights();
 
-        navItemsCollapseIcon.addEventListener('click', (e) => {
-            toggleSubNavList(e.currentTarget);
+        navItemsCollapseIcons.forEach((navItemsCollapseIcon) =>  {
+            navItemsCollapseIcon.addEventListener('click', (e) => {
+                toggleSubNavList(e.currentTarget);
+            });
         });
 
         showActiveSidebarSubLink();
